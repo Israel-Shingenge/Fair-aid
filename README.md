@@ -3,9 +3,6 @@
 Transparent, explainable pre-screening of bursary / financial-aid schemes for students. Advisory only:
 the system never submits applications or makes binding funding decisions (human-in-the-loop policy).
 
-Ported from FastAPI to **Django + Django REST Framework**. The HTTP API is unchanged: same URLs
-(`/api/...`), same JSON shapes, same JWT session behaviour.
-
 ## Layout
 
 ```
@@ -87,7 +84,7 @@ Turns the decision tree's stored result into plain language and answers follow-u
 | `GET/DELETE /api/prescreen/history/{id}/conversation` | Read or clear that run's conversation |
 | `GET /api/explanations/quota` | Provider, model and remaining quota (admin) |
 
-**What-if questions** ("what if my income were 200k?"): the model only translates the question into a change.
+**What if questions** ("what if my income were 200k?"): the model only translates the question into a change.
 The change is validated (only `nqf_level`, `household_income`, `field_of_study`, `region`; every value must appear
 in what the student wrote; never disability), the decision tree is re-run on it, and the before/after results come
 from the engine. Nothing is saved.
