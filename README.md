@@ -103,13 +103,3 @@ from the engine. Nothing is saved.
 
 With no key, or with the model down, every endpoint still works using the engine's own wording.
 
-## Differences from the FastAPI version
-
-* **Validation errors** now use DRF's format (`{"field": ["message"]}`, HTTP 400) instead of FastAPI's
-  `{"detail": [...]}` (HTTP 422). Update frontend error handling if it parses these.
-* **Password hashes**: Django stores Argon2 hashes as `argon2$argon2id$...`. A legacy `pwdlib` hash
-  (`$argon2id$...`) can be converted by prefixing `argon2` (not exercised by the tests).
-* `seed_schemes` writes to the database directly; the old script logged in over HTTP.
-* `scripts/create_superuser.py` is replaced by Django's `createsuperuser`.
-* Scheme list columns use `JSONField` instead of PostgreSQL `ARRAY`, so SQLite and Postgres behave alike.
-* Existing refresh tokens are not portable; users simply log in again.
