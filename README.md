@@ -1,4 +1,4 @@
-# FairAid Backend (Django)
+# FairAid Backend
 
 Transparent, explainable pre-screening of bursary / financial-aid schemes for students. Advisory only:
 the system never submits applications or makes binding funding decisions (human-in-the-loop policy).
