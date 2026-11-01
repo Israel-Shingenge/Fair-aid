@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="FairAid helps students explore Namibian funding schemes and understand potential eligibility."
+    />
+    <title>FairAid | Your future, your possibilities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Urbanist:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="FairAid home">FairAid</a
+      ><button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="navigation" id="navigation" aria-label="Main navigation">
+        <a href="#home" data-route="home">Home</a
+        ><a href="#explore" data-route="explore">Explore Funding</a
+        ><a href="#screen" data-route="screen">Check Eligibility</a
+        ><a href="#about" data-route="about">About</a
+        ><a class="sign-in-link" href="#signin" data-route="signin">Sign In</a
+        ><a href="#history" class="signed-only" data-route="history" hidden
+          >My History</a
+        ><button id="signout" class="signed-only signout" hidden>
+          Sign Out</button
+        ><a class="signup-link" href="#signup" data-route="signup">Sign Up</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="page hero" aria-labelledby="hero-heading">
+        <div class="home-hero-stage">
+          <div class="hero-shade"></div>
+          <div class="hero-content">
+            <div class="eyebrow">NAMIBIAN STUDENT FUNDING</div>
+            <h1 id="hero-heading">Your future.<br />Your possibilities.</h1>
+            <p>
+              Find funding opportunities, understand where you may qualify, and
+              take your next step with confidence.
+            </p>
+          </div>
+          <div class="action-grid">
+            <a class="action-card primary-card" href="#screen"
+              ><span class="action-card-photo"
+                ><img
+                  src="assets/card-eligibility.webp"
+                  alt="Green checkmark representing an eligibility check"
+                  loading="eager" /></span
+              ><span class="action-card-content"
+                ><span class="card-number">01</span>
+                <h2>Check Eligibility</h2>
+                <p>See which opportunities may match your circumstances.</p>
+                <span class="card-bottom"
+                  >Start screening <span aria-hidden="true">→</span></span
+                ></span
+              ></a
+            ><a class="action-card" href="#explore"
+              ><span class="action-card-photo"
+                ><img
+                  src="assets/card-funding.webp"
+                  alt="Funding concept with target graphic"
+                  loading="eager" /></span
+              ><span class="action-card-content"
+                ><span class="card-number">02</span>
+                <h2>Explore Funding</h2>
+                <p>Discover the types of student funding available.</p>
+                <span class="category-plain"
+                  >Bursaries · Scholarships · Grants · Loans</span
+                ><span class="card-bottom"
+                  >Browse opportunities <span aria-hidden="true">→</span></span
+                ></span
+              ></a
+            ><a class="action-card" href="#about"
+              ><span class="action-card-photo"
+                ><img
+                  src="assets/card-how-it-works.webp"
+                  alt="Thoughtful student considering their next step"
+                  loading="eager" /></span
+              ><span class="action-card-content"
+                ><span class="card-number">03</span>
+                <h2>How FairAid Works</h2>
+                <p>
+                  Learn how our pre-screening works and what your results mean.
+                </p>
+                <span class="card-bottom"
+                  >Learn more <span aria-hidden="true">→</span></span
+                ></span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="home-story" id="home-story">
+          <div class="home-story-photo">
+            <img
+              src="assets/students-collaborating.png"
+              alt="Students working together around a laptop"
+              loading="lazy"
+            />
+          </div>
+          <div class="home-story-copy">
+            <p class="home-story-kicker">MADE FOR THE NEXT STEP</p>
+            <h2>Funding should be easier to understand.</h2>
+            <p>
+              Finding support for your studies can mean sorting through
+              different requirements and unfamiliar terms. FairAid brings
+              opportunities into one place and helps you understand where you
+              may qualify.
+            </p>
+            <a href="#guide" class="home-story-link"
+              >See how FairAid works <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="explore" class="page inner-page" hidden>
+        <div class="page-intro">
+          <span class="eyebrow">FIND YOUR PATH</span>
+          <h1>Explore funding.</h1>
+          <p>
+            Browse funding opportunities and read their requirements. To check
+            your potential matches across all schemes registered in FairAid, use
+            Check Eligibility in the navigation.
+          </p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter funding type">
+          <button class="filter active" data-filter="All" aria-pressed="true">
+            All opportunities</button
+          ><button class="filter" data-filter="Bursary" aria-pressed="false">
+            Bursaries</button
+          ><button
+            class="filter"
+            data-filter="Scholarship"
+            aria-pressed="false"
+          >
+            Scholarships</button
+          ><button class="filter" data-filter="Grant" aria-pressed="false">
+            Grants</button
+          ><button class="filter" data-filter="Loan" aria-pressed="false">
+            Loans
+          </button>
+        </div>
+        <div class="scheme-grid" id="scheme-grid"></div>
+        <p class="data-note">
+          Includes the group's existing funding library and schemes registered
+          in FairAid's backend when connected. Only registered schemes are
+          assessed by the screening engine. Requirements and availability must
+          be verified with official providers.
+        </p>
+      </section>
+      <section id="about" class="page inner-page" hidden>
+        <div class="page-intro">
+          <span class="eyebrow">ABOUT THE PROJECT</span>
+          <h1>Clarity for your next step.</h1>
+          <p>
+            FairAid is an explainable, non-binding pre-screening assistant. It
+            helps students understand potential funding matches, the criteria
+            behind them and possible next steps.
+          </p>
+        </div>
+        <div class="info-grid">
+          <a href="#guide" class="info-link"
+            ><span class="step">01</span>
+            <h2>How FairAid works</h2>
+            <p>
+              See what to prepare, how screening works and how to understand
+              your results.
+            </p></a
+          ><a href="#screen" class="info-link"
+            ><span class="step">02</span>
+            <h2>Pre-screen</h2>
+            <p>
+              Sign in and enter your circumstances. The rule-based engine checks
+              registered schemes.
+            </p></a
+          ><a href="#results" class="info-link"
+            ><span class="step">03</span>
+            <h2>Understand</h2>
+            <p>
+              Review explanations and suggestions. Funders, not FairAid, make
+              final decisions.
+            </p></a
+          >
+        </div>
+        <p class="plain-disclaimer">
+          <strong>Important:</strong> FairAid does not submit applications,
+          award funding or guarantee eligibility. Always confirm requirements
+          with the official funder.
+        </p>
+      </section>
+
+      <section
+        id="guide"
+        class="page inner-page guide-page"
+        hidden
+        aria-labelledby="guide-title"
+      >
+        <div class="guide-shell">
+          <div class="guide-heading">
+            <span class="guide-kicker">A GUIDE FOR STUDENTS</span>
+            <h1 id="guide-title">How FairAid works.</h1>
+            <p>
+              Before you begin, here's what you'll need, what FairAid checks,
+              and how to make sense of your results.
+            </p>
+          </div>
+          <nav class="guide-jump" aria-label="On this page">
+            <a href="#guide" data-guide-target="guide-prepare"
+              >What to prepare</a
+            ><a href="#guide" data-guide-target="guide-screening"
+              >The screening process</a
+            ><a href="#guide" data-guide-target="guide-results"
+              >Understanding results</a
+            ><a href="#guide" data-guide-target="guide-next"
+              >What happens next</a
+            >
+          </nav>
+          <div class="guide-section" id="guide-prepare">
+            <div class="guide-aside">Before you begin</div>
+            <div class="guide-body">
+              <h2>What information will you need?</h2>
+              <p>
+                FairAid asks for five details about your circumstances. You do
+                not need to upload documents to complete the current
+                pre-screening form.
+              </p>
+              <dl class="guide-definitions">
+                <div>
+                  <dt>Your NQF level</dt>
+                  <dd>
+                    The qualification level you are studying towards or have
+                    reached.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Field of study</dt>
+                  <dd>
+                    Your programme or subject area, selected from the available
+                    options.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Annual household income</dt>
+                  <dd>
+                    The total income of your household over a year, in Namibian
+                    dollars (N$), not a monthly amount.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Region</dt>
+                  <dd>
+                    Your region, used when a funding scheme has location-related
+                    criteria.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Disability status</dt>
+                  <dd>
+                    A yes-or-no response used where a scheme includes
+                    disability-related eligibility requirements.
+                  </dd>
+                </div>
+              </dl>
+              <p class="guide-small">
+                Use accurate information. FairAid compares what you enter with
+                the criteria registered for each scheme.
+              </p>
+            </div>
+          </div>
+          <div class="guide-section" id="guide-screening">
+            <div class="guide-aside">The assessment</div>
+            <div class="guide-body">
+              <h2>How is eligibility checked?</h2>
+              <p>
+                After signing in, you complete the form and select
+                <strong>Run pre-screening</strong>. FairAid sends your answers
+                to its Django backend, where a rule-based decision tree compares
+                them with the criteria of the funding schemes registered in the
+                system.
+              </p>
+              <p>
+                For example, a scheme may require a minimum NQF level, a
+                particular field of study or an income below a specified limit.
+                The engine checks the applicable conditions and produces a
+                result for each registered scheme. This is a criteria check, not
+                an application or a prediction of who will receive an award.
+              </p>
+              <a class="guide-action" href="#screen"
+                >Go to eligibility screening
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+          <div class="guide-section" id="guide-results">
+            <div class="guide-aside">Your results</div>
+            <div class="guide-body">
+              <h2>What will your result tell you?</h2>
+              <p>
+                FairAid can classify a scheme as
+                <strong>Likely eligible</strong>,
+                <strong>Possibly eligible</strong> or
+                <strong>Not eligible</strong> based on the rules it checks.
+                Alongside the classification, you can see which criteria
+                matched, which did not, and possible next steps.
+              </p>
+              <p>
+                A percentage shown in the results is the proportion of
+                applicable criteria met.
+                <strong>It is not your chance of receiving funding.</strong>
+              </p>
+              <p>
+                You can also request a plain-language explanation and ask
+                follow-up questions about a saved screening. The AI assistant
+                explains the decision tree's outcome; it cannot change the
+                classification or make funding decisions. If the AI service is
+                unavailable, the system can fall back to its rule-based
+                explanation.
+              </p>
+            </div>
+          </div>
+          <div class="guide-section" id="guide-next">
+            <div class="guide-aside">After screening</div>
+            <div class="guide-body">
+              <h2>What should you do next?</h2>
+              <p>
+                When you sign in, your screening can be saved under
+                <strong>My History</strong>, where you can return to previous
+                results. Review the reasons and suggestions, then check the
+                funding provider's official requirements and application
+                instructions.
+              </p>
+              <p>
+                FairAid does not apply on your behalf, submit documents, approve
+                loans or bursaries, or guarantee an award. The funding provider
+                makes the final decision. Funding information can change, and
+                some opportunities shown in Explore Funding are not yet
+                supported by the screening engine.
+              </p>
+              <div class="guide-actions">
+                <a class="guide-action" href="#screen"
+                  >Check eligibility <span aria-hidden="true">↗</span></a
+                ><a class="guide-action secondary" href="#history"
+                  >My History <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="screen" class="page inner-page" hidden>
+        <div class="page-intro">
+          <span class="eyebrow">STUDENT PRE-SCREENING</span>
+          <h1>Check your eligibility.</h1>
+          <p>
+            Complete one form to check your circumstances against every funding
+            scheme registered in FairAid. Each scheme is assessed against its
+            own criteria, and you will receive a separate result for each one.
+            This is guidance, not a funding decision.
+          </p>
+        </div>
+        <div id="screen-gate" class="surface">
+          <h2>Sign in to begin</h2>
+          <p>Your results will be saved to your student screening history.</p>
+          <div class="auth-actions">
+            <a class="button-dark" href="#signin">Sign In</a
+            ><a class="button-outline" href="#signup">Create Account</a>
+          </div>
+        </div>
+        <form id="screen-form" class="surface field-form" hidden>
+          <div class="form-grid">
+            <div>
+              <label for="nqf">Current NQF level</label
+              ><select id="nqf" required>
+                <option value="">Select NQF level</option>
+              </select>
+            </div>
+            <div>
+              <label for="field">Field of study</label
+              ><select id="field" required>
+                <option value="">Choose a field</option>
+              </select>
+            </div>
+            <div>
+              <label for="income">Annual household income (NAD)</label
+              ><input
+                id="income"
+                type="number"
+                min="0"
+                step="1"
+                placeholder="e.g. 120000"
+                required
+              /><small>Total yearly income, not monthly income.</small>
+            </div>
+            <div>
+              <label for="region">Region</label
+              ><select id="region" required>
+                <option value="">Select your region</option>
+              </select>
+            </div>
+            <div>
+              <label for="disability">Disability status</label
+              ><select id="disability" required>
+                <option value="">Choose an option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option></select
+              ><small>Used only for criteria where relevant.</small>
+            </div>
+          </div>
+          <p class="plain-disclaimer">
+            FairAid checks registered criteria. Enter your actual circumstances.
+          </p>
+          <button class="button-dark" type="submit">Run pre-screening →</button>
+          <p class="form-message" role="status"></p>
+        </form>
+      </section>
+      <section id="detail" class="page inner-page" hidden>
+        <a href="#explore" class="back-link"
+          ><span class="back-arrow" aria-hidden="true">←</span> Back to
+          funding</a
+        >
+        <div id="scheme-detail" class="surface"></div>
+      </section>
+      <section id="results" class="page inner-page" hidden>
+        <div class="page-intro">
+          <span class="eyebrow">YOUR RESULTS</span>
+          <h1>Screening results.</h1>
+          <p>
+            Each result reflects the eligibility rules registered for that
+            scheme. Stronger matches appear first. Scores measure criteria met,
+            not your probability of receiving funding.
+          </p>
+        </div>
+        <div
+          id="results-summary"
+          class="results-summary"
+          aria-live="polite"
+        ></div>
+        <div id="result-grid" class="results-list"></div>
+        <div class="surface assistant">
+          <h2>Understand your results</h2>
+          <p>
+            Ask why a scheme matched, or explore a hypothetical change. The
+            assistant explains the engine's results and cannot award funding.
+          </p>
+          <button id="explain-btn" class="button-outline">
+            Explain my results
+          </button>
+          <div id="explanation" aria-live="polite"></div>
+          <form id="ask-form" class="field-form">
+            <label for="question">Ask a follow-up</label>
+            <div class="question-row">
+              <input
+                id="question"
+                maxlength="500"
+                placeholder="Why did I not match this scheme?"
+                required
+              /><button class="button-dark">Ask →</button>
+            </div>
+            <p class="form-message" role="status"></p>
+          </form>
+          <div id="conversation" aria-live="polite"></div>
+        </div>
+      </section>
+      <section id="history" class="page inner-page" hidden>
+        <div class="page-intro">
+          <span class="eyebrow">YOUR ACCOUNT</span>
+          <h1>My history.</h1>
+          <p>
+            Revisit your previous eligibility checks and their explanations.
+          </p>
+        </div>
+        <div id="history-list" class="results-list"></div>
+      </section>
+      <section id="signin" class="page inner-page auth-page" hidden>
+        <div class="auth-shell">
+          <span class="eyebrow">WELCOME BACK</span>
+          <h1>Sign in.</h1>
+          <p>Access your screening results and continue exploring.</p>
+          <form id="signin-form">
+            <label for="login-email">Email address</label
+            ><input
+              id="login-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            /><label for="login-password">Password</label
+            ><input
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="Enter your password"
+            /><button type="submit" class="button-dark">
+              Sign In <span aria-hidden="true">→</span>
+            </button>
+            <p class="form-message" role="status"></p>
+          </form>
+          <button type="button" id="demo-access" class="demo-access">
+            Continue with a sample student (test without signing in)
+          </button>
+          <p class="auth-switch">
+            New to FairAid? <a href="#signup">Create an account</a>
+          </p>
+        </div>
+      </section>
+      <section id="signup" class="page inner-page auth-page" hidden>
+        <div class="auth-shell">
+          <span class="eyebrow">GET STARTED</span>
+          <h1>Create an account.</h1>
+          <p>Make an account to begin your funding pre-screening.</p>
+          <form id="signup-form">
+            <label for="full-name">Full name</label
+            ><input
+              id="full-name"
+              name="full_name"
+              autocomplete="name"
+              required
+              placeholder="Your full name"
+            /><label for="signup-email">Email address</label
+            ><input
+              id="signup-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            /><label for="signup-password"
+              >Password (at least 8 characters)</label
+            ><input
+              id="signup-password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+              placeholder="Create a password"
+            /><button type="submit" class="button-dark">
+              Create Account <span aria-hidden="true">→</span>
+            </button>
+            <p class="form-message" role="status"></p>
+          </form>
+          <button type="button" id="signup-demo-access" class="demo-access">
+            Preview the screening form without an account
+          </button>
+          <p class="auth-switch">
+            Already registered? <a href="#signin">Sign in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span>FairAid © 2026</span
+      ><span
+        >Pre-screening guidance only. Funding decisions remain with
+        providers.</span
+      >
+    </footer>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
